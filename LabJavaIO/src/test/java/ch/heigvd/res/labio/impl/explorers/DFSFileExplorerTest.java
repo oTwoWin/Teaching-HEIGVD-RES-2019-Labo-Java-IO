@@ -34,6 +34,8 @@ public class DFSFileExplorerTest {
         directories.add(file.getName());
       }
     });
+    System.out.println(dfsNodes.toString());
+    System.out.println(directories.toString());
     assertArrayEquals(dfsNodes.toArray(), directories.toArray());
   }
 
