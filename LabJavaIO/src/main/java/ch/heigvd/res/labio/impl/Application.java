@@ -166,6 +166,11 @@ public class Application implements IApplication {
                  * of the the IFileVisitor interface inline. You just have to add the body of the visit method, which should
                  * be pretty easy (we want to write the filename, including the path, to the writer passed in argument).
                  */
+                try {
+                    writer.write(file.getPath() + "\n", 0, file.getPath().length() + 1);
+                } catch (Exception e){
+                    System.out.println("An error occurred while writing file.");
+                }
             }
         });
     }

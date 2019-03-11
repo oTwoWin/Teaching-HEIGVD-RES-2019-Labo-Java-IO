@@ -21,10 +21,7 @@ public class UpperCaseFilterWriter extends FilterWriter {
 
   @Override
   public void write(char[] cbuf, int off, int len) throws IOException {
-      for(int i = 0; i < cbuf.length; ++i){
-        cbuf[i] = Character.toUpperCase(cbuf[i]);
-      }
-      super.write(cbuf, off, len);
+      super.write(new String(cbuf).toUpperCase(), off, len);
   }
 
   @Override

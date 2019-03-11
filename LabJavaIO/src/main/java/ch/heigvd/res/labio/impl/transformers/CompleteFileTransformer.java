@@ -18,7 +18,6 @@ public class CompleteFileTransformer extends FileTransformer {
 
   @Override
   public Writer decorateWithFilters(Writer writer) {
-
     /*
      * If you uncomment the following line (and get rid of th 3 previous lines...), you will restore the decoration 
      * of the writer (connected to the file. You can see that you first decorate the writer with an UpperCaseFilterWriter, which you then
